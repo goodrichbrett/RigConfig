@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Part
 
 # Create your views here.
 
@@ -31,3 +32,24 @@ def signup(request):
 
 def home(request):
     return render(request, 'home.html')
+
+
+@login_required
+def parts_index(request):
+    parts = Part.objects.all()
+    return render(request, 'parts/index.html', {'parts': parts})
+
+
+@login_required
+def parts_detail(request, part_id):
+    part = Part.objects.get(id=part_id)
+    return render(request, 'parts/detail.html', {'part': part})
+
+
+class PartCreate(LoginRequiredMixin, CreateView):
+    model = Part
+    fields = '__all__'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
