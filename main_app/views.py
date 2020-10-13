@@ -58,3 +58,8 @@ class PartCreate(LoginRequiredMixin, CreateView):
 class PartUpdate(LoginRequiredMixin, UpdateView):
     model = Part
     fiels = '__all__'
+
+
+class PartDelete(LoginRequiredMixin, DeleteView):
+    model = Part
+    success_url = '/parts/'
