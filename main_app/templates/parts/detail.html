@@ -2,12 +2,13 @@
 
 <h1>Part Details</h1>
 
-<table class="table">
+<table class="responsive-table striped">
 	<thead>
 		<tr>
-			<th scope="col">Name</th>
-			<th scope="col">Component</th>
-			<th scope="col">Price USD</th>
+			<th>Name</th>
+			<th>Component</th>
+			<th>Price USD</th>
+			<th>Delete</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -15,6 +16,7 @@
 			<td>{{part.name}}</td>
 			<td>{{part.component}}</td>
 			<td>{{part.price}}</td>
+			<td><a href="{% url 'parts_delete' part.id %}">X</a></td>
 		</tr>
 	</tbody>
 </table>

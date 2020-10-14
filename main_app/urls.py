@@ -10,6 +10,6 @@ urlpatterns = [
     path('parts/<int:part_id>/', views.parts_detail, name='detail'),
     path('parts/<int:part_id>/update/',
          views.PartUpdate.as_view(), name='parts_update'),
-    path('parts/<int:part_id>/delete/',
+    path('parts/<int:pk>/delete/',
          views.PartDelete.as_view(), name="parts_delete")
 ]

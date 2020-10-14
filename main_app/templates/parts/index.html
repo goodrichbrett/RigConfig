@@ -2,20 +2,20 @@
 
 <h1>Part List</h1>
 
-<table class="table table-dark">
+<table class="responsive-table striped">
 	<thead>
 		<tr>
-			<th scope="col">id</th>
-			<th scope="col">Part</th>
-			<th scope="col">Component</th>
-			<th scope="col">Price</th>
+			<th>id</th>
+			<th>Part</th>
+			<th>Component</th>
+			<th>Price</th>
 		</tr>
 	</thead>
 	<tbody>
 		{% for part in parts %}
 		<tr>
-			<th scope="row">{{part.id}}</th>
-			<td>{{part.name}}</td>
+			<th>{{part.id}}</th>
+			<td><a href="{% url 'detail' part.id %}">{{part.name}}</a></td>
 			<td>{{part.component}}</td>
 			<td>${{part.price}}</td>
 		</tr>

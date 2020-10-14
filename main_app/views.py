@@ -57,7 +57,7 @@ class PartCreate(LoginRequiredMixin, CreateView):
 
 class PartUpdate(LoginRequiredMixin, UpdateView):
     model = Part
-    fiels = '__all__'
+    fields = '__all__'
 
 
 class PartDelete(LoginRequiredMixin, DeleteView):
