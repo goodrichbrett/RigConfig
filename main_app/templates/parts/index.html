@@ -2,15 +2,24 @@
 
 <h1>Part List</h1>
 
-{% for part in parts %}
-<div class="card">
-	<a href="{% url 'detail' part.id %}">
-		<div class="card-content">
-			<span class="card-title">{{ cat.name }}</span>
-			<p>Part: {{ part.name }}</p>
-			<p>Component: {{ part.component }}</p>
-			<p>Price: {{ part.price }}</p>
-		</div>
-	</a>
-</div>
-{% endfor %} {% endblock %}
+<table class="table table-dark">
+	<thead>
+		<tr>
+			<th scope="col">id</th>
+			<th scope="col">Part</th>
+			<th scope="col">Component</th>
+			<th scope="col">Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for part in parts %}
+		<tr>
+			<th scope="row">{{part.id}}</th>
+			<td>{{part.name}}</td>
+			<td>{{part.component}}</td>
+			<td>${{part.price}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
