@@ -3,6 +3,7 @@ body {
 	min-height: 100vh;
 	flex-direction: column;
 	color: black;
+	font-family: 'Roboto Mono', monospace;
 }
 
 main {
@@ -14,6 +15,7 @@ footer.page-footer {
 	text-align: right;
 }
 
-h1 {
+h1,
+h2 {
 	text-align: center;
 }

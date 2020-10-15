@@ -1,24 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Part Details</h1>
-
-<table class="responsive-table striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Component</th>
-			<th>Price USD</th>
-			<th>Delete</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{part.name}}</td>
-			<td>{{part.component}}</td>
-			<td>{{part.price}}</td>
-			<td><a href="{% url 'parts_delete' part.id %}">X</a></td>
-		</tr>
-	</tbody>
-</table>
+<div class="col s12 m7">
+	<h2 class="header">PART DETAILS</h2>
+	<div class="card horizontal">
+		<div class="card-stacked">
+			<div class="card-content">
+				<p>NAME: {{part.name}}</p>
+				<p>COMPONENT: {{part.component}}</p>
+				<p>PRICE: {{part.price}}</p>
+			</div>
+			<div class="card-action">
+				<a href="{% url 'parts_delete' part.id %}">REMOVE</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 {% endblock %}
