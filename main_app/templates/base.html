@@ -10,6 +10,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 		/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link
 			href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap"
 			rel="stylesheet"
@@ -30,7 +31,7 @@
 	</head>
 			<nav>
 				<div class="nav-wrapper amber accent-2 " >
-					<a href="#" class="brand-logo left black-text" style="margin-left: 10px">  RIG CONFIG</a>
+					<a href="/parts" class="brand-logo left black-text" style="margin-left: 10px">  RIG CONFIG</a>
 					<ul class="right black-text"  >
 						<li><a class="black-text" href="{% url 'index' %}">PARTS</a></li>
 						{% if user.is_authenticated %}

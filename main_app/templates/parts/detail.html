@@ -1,19 +1,14 @@
 {% extends 'base.html' %} {% block content %}
-
-<div class="col s12 m7">
-	<h2 class="header">PART DETAILS</h2>
-	<div class="card horizontal">
-		<div class="card-stacked">
-			<div class="card-content">
-				<p>NAME: {{part.name}}</p>
-				<p>COMPONENT: {{part.component}}</p>
-				<p>PRICE: {{part.price}}</p>
-			</div>
-			<div class="card-action">
-				<a href="{% url 'parts_delete' part.id %}">REMOVE</a>
-			</div>
-		</div>
-	</div>
-</div>
+<a
+	style="margin: 30px"
+	class="btn-floating btn-large waves-effect waves-light amber accent-2"
+	href="/parts/"
+	><i class="material-icons">arrow_back</i></a
+>
+<ul class="collection with-header">
+	<li class="collection-item"><h4>NAME: {{part.name}}</h4></li>
+	<li class="collection-item">COMPONENT: {{part.component}}</li>
+	<li class="collection-item">PRICE: {{part.price}}</li>
+</ul>
 
 {% endblock %}
