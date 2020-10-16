@@ -18,6 +18,7 @@
 -   HTML
 -   CSS
 -   MaterializeCSS
+-   Heroku
 
 # [Trello Board](https://trello.com/b/JVBUfO8Z/rigconfig)
 
