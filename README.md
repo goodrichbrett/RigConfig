@@ -6,6 +6,10 @@
 
 ![Image](./img/partdetails.png)
 
+# Objective
+
+-   Allow users to keep track of different computer hardware components
+
 # Technologies Used
 
 -   Python
