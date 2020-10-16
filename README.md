@@ -17,6 +17,7 @@
 -   PostgreSQL
 -   HTML
 -   CSS
+-   MaterializeCSS
 
 # [Trello Board](https://trello.com/b/JVBUfO8Z/rigconfig)
 
