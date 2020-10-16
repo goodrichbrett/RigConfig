@@ -18,6 +18,8 @@
 -   HTML
 -   CSS
 
+# [Trello Board](https://trello.com/b/JVBUfO8Z/rigconfig)
+
 # User Stories
 
 -   As a user I want to add parts to my list
